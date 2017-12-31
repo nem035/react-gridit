@@ -1,0 +1,62 @@
+{
+  "name": "react-gridit",
+  "version": "0.0.1",
+  "description": "Simple React grid using CSS Grid and styled-components",
+  "main": "dist/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "scripts": {
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir dist",
+    "build:es": "BABEL_ENV=es babel src --out-dir es",
+    "build": "npm run build:es && npm run build:cjs",
+    "clean": "trash dist es",
+    "flow": "flow",
+    "lint": "eslint . --ignore-path .gitignore",
+    "prebuild": "npm run clean",
+    "prepublish": "npm run test && npm run build"
+  },
+  "author": "Nemanja Stojanovic <me@nem035.com>",
+  "homepage": "https://github.com/nem035/react-gridit.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nem035/react-gridit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nem035/react-gridit/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "composition",
+    "simple",
+    "grid",
+    "layout",
+    "css",
+    "column",
+    "row"
+  ],
+  "files": ["es", "dist"],
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "react": "^16.2.0",
+    "react-media": "^1.6.1",
+    "styled-components": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-react": "^7.1.0",
+    "flow-bin": "^0.62.0",
+    "trash-cli": "^1.4.0"
+  }
+}

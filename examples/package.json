@@ -1,0 +1,21 @@
+{
+  "name": "react-gridit-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "examples.js",
+  "author": "Nemanja Stojanovic <me@nem035.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react-dom": "^16.2.0",
+    "react-syntax-highlighter": "^6.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
