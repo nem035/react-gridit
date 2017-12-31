@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "react-dom": "^16.2.0",
-    "react-gridit": "0.0.1",
+    "react-gridit": "^0.2.0",
     "react-syntax-highlighter": "^6.1.1"
   },
   "devDependencies": {
