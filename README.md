@@ -10,7 +10,7 @@ Simple React grid using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/
 
 ## Examples
 
-See [![Codesandbox examples](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/10p4l2m33) or checkout the [examples](https://github.com/nem035/react-gridit/tree/master/examples) React app.
+[![Codesandbox examples](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/10p4l2m33) or checkout the [examples](https://github.com/nem035/react-gridit/tree/master/examples) React app.
 
 ### Rows
 
