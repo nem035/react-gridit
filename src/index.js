@@ -1,9 +1,24 @@
 // @flow
 import React, { Children } from 'react';
+import type { Node } from 'react';
 import styled from 'styled-components';
 import Media from 'react-media';
 
-const dimension = props =>
+type GridAreaProps = {
+  names: Array<string>,
+  children: Node,
+  area: string,
+  query?: string,
+  fallbackArea?: string,
+};
+
+type GridProps = {
+  children: Node,
+  fr?: number,
+  minSize?: string,
+};
+
+const dimension = (props: GridProps) =>
   Children.toArray(props.children).reduce(
     (cssString, child) =>
       child && typeof child.props.fr === 'number'
@@ -30,7 +45,7 @@ const GridAreaView = styled(Grid)`
   grid-template-areas: ${props => props.area};
 `;
 
-export const GridArea = props => {
+export const GridArea = (props: GridAreaProps) => {
   const namesSet = new Set(props.names);
 
   const children = React.Children.map(props.children, child => {
@@ -64,4 +79,8 @@ export const GridArea = props => {
   }
 
   return <GridAreaView area={props.area}>{children}</GridAreaView>;
+};
+
+GridArea.defaultProps = {
+  query: null,
 };
