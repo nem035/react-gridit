@@ -67,7 +67,6 @@ Output:
 
 ```jsx
 <GridArea
-  names={['header', 'sidebar', 'main1', 'main2', 'footer']}
   area={`
     "header header header header"
     "sidebar . main1 main2"
@@ -90,7 +89,6 @@ Output:
 
 ```jsx
 <GridArea
-  names={['header', 'sidebar', 'main1', 'main2', 'footer']}
   area={`
     "a b"
     "c d"

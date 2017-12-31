@@ -5,7 +5,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { dark } from 'react-syntax-highlighter/styles/prism';
 import styled from 'styled-components';
 
-import { GridArea, GridColumns, GridRows } from '../../src';
+import { GridArea, GridColumns, GridRows } from 'react-gridit';
 
 const colors = ['#1abc9c', '#3498db', '#2ecc71', '#9b59b6', '#34495e'];
 
@@ -93,13 +93,6 @@ render(
       <Center>
         <SyntaxHighlighter language="javascript" style={dark}>
           {`<GridArea
-  names={[
-    "header",
-    "sidebar",
-    "main1",
-    "main2",
-    "footer"
-  ]}
   area={\`
     "header header header header"
     "sidebar . main1 main2"
@@ -114,7 +107,6 @@ render(
         </SyntaxHighlighter>
       </Center>
       <GridArea
-        names={['header', 'sidebar', 'main1', 'main2', 'footer']}
         area={`
           "header header header header"
           "sidebar . main1 main2"
@@ -143,13 +135,6 @@ render(
       <Center>
         <SyntaxHighlighter language="javascript" style={dark}>
           {`<GridArea
-  names={[
-    "header",
-    "sidebar",
-    "main1",
-    "main2",
-    "footer"
-  ]}
   area={\`
     "a b"
     "c d"
@@ -166,7 +151,6 @@ render(
         </SyntaxHighlighter>
       </Center>
       <GridArea
-        names={['a', 'b', 'c', 'd']}
         area={`
           "a b"
           "c d"

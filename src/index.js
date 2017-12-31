@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Media from 'react-media';
 
 type GridAreaProps = {
-  names: Array<string>,
   children: Node,
   area: string,
   query?: string,
@@ -46,7 +45,9 @@ const GridAreaView = styled(Grid)`
 `;
 
 export const GridArea = (props: GridAreaProps) => {
-  const namesSet = new Set(props.names);
+  const namesSet = new Set(
+    props.area.split(/"*(\s|\r?\n|\r)"*/).filter(s => s.trim() && s !== '.')
+  );
 
   const children = React.Children.map(props.children, child => {
     if (child) {
