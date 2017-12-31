@@ -1,6 +1,6 @@
 {
   "name": "react-gridit",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple React grid using CSS Grid and styled-components",
   "main": "dist/index.js",
   "module": "es/index.js",
