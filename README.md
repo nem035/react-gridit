@@ -6,7 +6,7 @@
 
 # [react-gridit](https://www.npmjs.org/package/react-gridit)
 
-Simple React grid using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) and [styled-components](https://www.styled-components.com/)
+React grid using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) and [styled-components](https://www.styled-components.com/)
 
 ## Examples
 
