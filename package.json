@@ -38,7 +38,6 @@
   "files": ["es", "dist"],
   "license": "MIT",
   "dependencies": {
-    "babel-preset-env": "^1.6.1",
     "react": "^16.2.0",
     "react-media": "^1.6.1",
     "styled-components": "^2.4.0"
