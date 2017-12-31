@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://www.npmjs.org/package/react-gridit">
-  	<img src="https://github.com/nem035/react-gridit/logo.png" alt="react-gridit">
+  	<img src="https://github.com/nem035/react-gridit/blob/master/logo.png" alt="react-gridit">
   </a>
 </p>
 
@@ -24,7 +24,7 @@ Simple React grid using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/
 
 Output:
 
-<img src="https://github.com/nem035/react-gridit/examples/rows.png" alt="react-gridit-rows">
+<img src="https://github.com/nem035/react-gridit/blob/master/examples/rows.png" alt="react-gridit-rows">
 
 ### Columns
 
@@ -38,7 +38,7 @@ Output:
 </GridColumns>
 ```
 
-<img src="https://github.com/nem035/react-gridit/examples/columns.png" alt="react-gridit-columns">
+<img src="https://github.com/nem035/react-gridit/blob/master/examples/columns.png" alt="react-gridit-columns">
 
 ### Nesting
 
@@ -59,7 +59,7 @@ Output:
 </GridRows>
 ```
 
-<img src="https://github.com/nem035/react-gridit/examples/nesting.png" alt="react-gridit-nesting">
+<img src="https://github.com/nem035/react-gridit/blob/master/examples/nesting.png" alt="react-gridit-nesting">
 
 ### Areas
 
@@ -82,7 +82,7 @@ Output:
 
 Output:
 
-<img src="https://github.com/nem035/react-gridit/examples/area.png" alt="react-gridit-area">
+<img src="https://github.com/nem035/react-gridit/blob/master/examples/area.png" alt="react-gridit-area">
 
 ### Responsive areas
 
@@ -106,11 +106,11 @@ Output:
 
 Output (match):
 
-<img src="https://github.com/nem035/react-gridit/examples/area-responsive-match.png" alt="react-gridit-area-responsive-match">
+<img src="https://github.com/nem035/react-gridit/blob/master/examples/area-responsive-match.png" alt="react-gridit-area-responsive-match">
 
 Output (no match):
 
-<img src="https://github.com/nem035/react-gridit/examples/area-responsive-no-match.png" alt="react-gridit-area-responsive-no-match">
+<img src="https://github.com/nem035/react-gridit/blob/master/examples/area-responsive-no-match.png" alt="react-gridit-area-responsive-no-match">
 
 ## License
 
