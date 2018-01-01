@@ -100,7 +100,6 @@ Output:
   <Block b>B</Block>
   <Block c>C</Block>
   <Block d>D</Block>
-  <Block footer>Footer</Block>
 </GridArea>
 ```
 
