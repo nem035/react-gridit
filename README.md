@@ -18,11 +18,11 @@ You can run the examples locally by doing `npm run examples`.
 
 ```jsx
 <GridRows minSize="20px">
-  <Block>1</Block>
-  <Block size={2}>2</Block>
-  <Block size={3}>3</Block>
-  <Block size={4}>4</Block>
-  <Block size={5}>5</Block>
+  <Block size="1fr">1</Block>
+  <Block size="2fr">2</Block>
+  <Block size="3fr">3</Block>
+  <Block size="4fr">4</Block>
+  <Block size="5fr">5</Block>
 </GridRows>
 ```
 
@@ -34,11 +34,11 @@ Output:
 
 ```jsx
 <GridColumns minSize="50px">
-  <Block>1</Block>
-  <Block size={2}>2</Block>
-  <Block size={3}>3</Block>
-  <Block size={4}>4</Block>
-  <Block size={5}>5</Block>
+  <Block size="1fr">1</Block>
+  <Block size="2fr">2</Block>
+  <Block size="3fr">3</Block>
+  <Block size="4fr">4</Block>
+  <Block size="5fr">5</Block>
 </GridColumns>
 ```
 
@@ -49,16 +49,16 @@ Output:
 ```jsx
 <GridRows minSize="20px">
   <GridColumns>
-    <Block size={1}>1</Block>
-    <Block size={3}>3</Block>
+    <Block size="1fr">1</Block>
+    <Block size="3fr">3</Block>
   </GridColumns>
   <GridColumns>
-    <Block size={1}>1</Block>
+    <Block size="1fr">1</Block>
   </GridColumns>
   <GridColumns>
-    <Block>1</Block>
-    <Block size={4}>4</Block>
-    <Block size={2}>2</Block>
+    <Block size="1fr">1</Block>
+    <Block size="4fr">4</Block>
+    <Block size="2fr">2</Block>
   </GridColumns>
 </GridRows>
 ```
