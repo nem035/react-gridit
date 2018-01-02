@@ -12,15 +12,17 @@ React grid using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS
 
 [![Codesandbox examples](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/10p4l2m33) or checkout the [examples](https://github.com/nem035/react-gridit/tree/master/examples) React app.
 
+You can run the examples locally by doing `npm run examples`.
+
 ### Rows
 
 ```jsx
 <GridRows minSize="20px">
-  <Block>1 fr</Block>
-  <Block fr={2}>2 frs</Block>
-  <Block fr={3}>3 frs</Block>
-  <Block fr={4}>4 frs</Block>
-  <Block fr={5}>5 frs</Block>
+  <Block>1</Block>
+  <Block size={2}>2</Block>
+  <Block size={3}>3</Block>
+  <Block size={4}>4</Block>
+  <Block size={5}>5</Block>
 </GridRows>
 ```
 
@@ -32,11 +34,11 @@ Output:
 
 ```jsx
 <GridColumns minSize="50px">
-  <Block>1 fr</Block>
-  <Block fr={2}>2 frs</Block>
-  <Block fr={3}>3 frs</Block>
-  <Block fr={4}>4 frs</Block>
-  <Block fr={5}>5 frs</Block>
+  <Block>1</Block>
+  <Block size={2}>2</Block>
+  <Block size={3}>3</Block>
+  <Block size={4}>4</Block>
+  <Block size={5}>5</Block>
 </GridColumns>
 ```
 
@@ -47,16 +49,16 @@ Output:
 ```jsx
 <GridRows minSize="20px">
   <GridColumns>
-    <Block fr={1}>1 frs</Block>
-    <Block fr={3}>3 frs</Block>
+    <Block size={1}>1</Block>
+    <Block size={3}>3</Block>
   </GridColumns>
   <GridColumns>
-    <Block fr={5}>5 frs</Block>
+    <Block size={1}>1</Block>
   </GridColumns>
   <GridColumns>
-    <Block>1 fr</Block>
-    <Block fr={4}>4 frs</Block>
-    <Block fr={2}>2 frs</Block>
+    <Block>1</Block>
+    <Block size={4}>4</Block>
+    <Block size={2}>2</Block>
   </GridColumns>
 </GridRows>
 ```

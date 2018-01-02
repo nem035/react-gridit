@@ -1,8 +1,9 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "react", "prettier"],
   "plugins": ["prettier"],
   "rules": {
+    "prettier/prettier": ["error"],
     "react/jsx-filename-extension": 0,
     "no-use-before-define": 0,
     "no-param-reassign": 0

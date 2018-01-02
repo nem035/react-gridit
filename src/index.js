@@ -1,29 +1,31 @@
 // @flow
-import React, { Children } from 'react';
-import type { Node } from 'react';
-import styled from 'styled-components';
-import Media from 'react-media';
+import React, { Children } from "react";
+
+import Media from "react-media";
+import type { Node } from "react";
+import styled from "styled-components";
 
 type GridAreaProps = {
   children: Node,
   area: string,
   query?: string,
-  fallbackArea?: string,
+  fallbackArea?: string
 };
 
 type GridProps = {
   children: Node,
   size?: string,
-  minSize?: string,
+  minSize?: string
 };
 
 const dimension = (props: GridProps) =>
   Children.toArray(props.children).reduce(
     (cssString, child) =>
-      child && typeof child.props.size === 'string'
+      (console.log(child.props.size),
+      child && typeof child.props.size === "string")
         ? `${cssString} ${child.props.size}`
-        : `${cssString} minmax(${props.minSize || '1em'}, 1fr)`,
-    ''
+        : `${cssString} minmax(${props.minSize || "1em"}, 1fr)`,
+    ""
   );
 
 const Grid = styled.div`
@@ -46,7 +48,7 @@ const GridAreaView = styled(Grid)`
 
 export const GridArea = (props: GridAreaProps) => {
   const namesSet = new Set(
-    props.area.split(/"*(\s|\r?\n|\r)"*/).filter(s => s.trim() && s !== '.')
+    props.area.split(/"*(\s|\r?\n|\r)"*/).filter(s => s.trim() && s !== ".")
   );
 
   const children = React.Children.map(props.children, child => {
@@ -57,8 +59,8 @@ export const GridArea = (props: GridAreaProps) => {
       if (areaName) {
         return React.cloneElement(child, {
           style: {
-            gridArea: areaName,
-          },
+            gridArea: areaName
+          }
         });
       }
     }
@@ -83,5 +85,5 @@ export const GridArea = (props: GridAreaProps) => {
 };
 
 GridArea.defaultProps = {
-  query: null,
+  query: null
 };

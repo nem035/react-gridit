@@ -1,24 +1,33 @@
+import { GridArea, GridColumns, GridRows } from "react-gridit";
+
 /* eslint-disable  */
-import React from 'react';
-import { render } from 'react-dom';
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
-import { dark } from 'react-syntax-highlighter/styles/prism';
-import styled from 'styled-components';
+import React from "react";
+import SyntaxHighlighter from "react-syntax-highlighter/prism";
+import { dark } from "react-syntax-highlighter/styles/prism";
+import { render } from "react-dom";
+import styled from "styled-components";
 
-import { GridArea, GridColumns, GridRows } from 'react-gridit';
+const colors = ["#1abc9c", "#3498db", "#2ecc71", "#9b59b6", "#34495e"];
 
-const colors = ['#1abc9c', '#3498db', '#2ecc71', '#9b59b6', '#34495e'];
+const getColorFromChar = props => {
+  if (props.a || props.header) return colors[0];
+  if (props.b || props.sidebar) return colors[1];
+  if (props.c || props.main1) return colors[2];
+  if (props.d || props.main2) return colors[3];
+  return colors[4];
+};
 
 const Block = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => colors[props.size ? props.size - 1 : props.index || 0]};
+  background-color: ${props =>
+    props.size ? colors[parseInt(props.size) - 1] : getColorFromChar(props)};
   padding: 5px;
 `;
 
 const Title = styled.h2`
-  background: #ccc;
+  background-color: #ccc;
   color: #2c3e50;
   margin: 0;
   text-align: center;
@@ -27,7 +36,7 @@ const Title = styled.h2`
 
 const Examples = styled.div`
   border: 5px dashed #2c3e50;
-  background: #ecf0f1;
+  background-color: #ecf0f1;
 `;
 
 const Example = styled.div`
@@ -51,20 +60,20 @@ render(
       <Center>
         <SyntaxHighlighter language="javascript" style={dark}>
           {`<GridRows minSize="20px">
-  <Block>1</Block>
-  <Block size={2}>2</Block>
-  <Block size={3}>3</Block>
-  <Block size={4}>4</Block>
-  <Block size={5}>5</Block>
+  <Block size="1fr">1</Block>
+  <Block size="2fr">2</Block>
+  <Block size="3fr">3</Block>
+  <Block size="4fr">4</Block>
+  <Block size="5fr">5</Block>
 </GridRows>`}
         </SyntaxHighlighter>
       </Center>
       <GridRows minSize="20px">
-        <Block>1</Block>
-        <Block size={2}>2</Block>
-        <Block size={3}>3</Block>
-        <Block size={4}>4</Block>
-        <Block size={5}>5</Block>
+        <Block size="1fr">1</Block>
+        <Block size="2fr">2</Block>
+        <Block size="3fr">3</Block>
+        <Block size="4fr">4</Block>
+        <Block size="5fr">5</Block>
       </GridRows>
     </Example>
     <Example>
@@ -72,20 +81,20 @@ render(
       <Center>
         <SyntaxHighlighter language="javascript" style={dark}>
           {`<GridColumns minSize="50px">
-  <Block>1</Block>
-  <Block size={2}>2</Block>
-  <Block size={3}>3</Block>
-  <Block size={4}>4</Block>
-  <Block size={5}>5</Block>
+  <Block size="1fr">1</Block>
+  <Block size="2fr">2</Block>
+  <Block size="3fr">3</Block>
+  <Block size="4fr">4</Block>
+  <Block size="5fr">5</Block>
 </GridColumns>`}
         </SyntaxHighlighter>
       </Center>
       <GridColumns minSize="50px">
-        <Block>1</Block>
-        <Block size={2}>2</Block>
-        <Block size={3}>3</Block>
-        <Block size={4}>4</Block>
-        <Block size={5}>5</Block>
+        <Block size="1fr">1</Block>
+        <Block size="2fr">2</Block>
+        <Block size="3fr">3</Block>
+        <Block size="4fr">4</Block>
+        <Block size="5fr">5</Block>
       </GridColumns>
     </Example>
     <Example>
@@ -113,21 +122,11 @@ render(
           "sidebar footer footer footer"
         `}
       >
-        <Block header index={0}>
-          Header
-        </Block>
-        <Block sidebar index={1}>
-          Sidebar
-        </Block>
-        <Block main1 index={2}>
-          Main1
-        </Block>
-        <Block main2 index={3}>
-          Main2
-        </Block>
-        <Block footer index={4}>
-          Footer
-        </Block>
+        <Block header>Header</Block>
+        <Block sidebar>Sidebar</Block>
+        <Block main1>Main1</Block>
+        <Block main2>Main2</Block>
+        <Block footer>Footer</Block>
       </GridArea>
     </Example>
     <Example>
@@ -158,20 +157,12 @@ render(
         query="(max-width: 599px)"
         fallbackArea={`"a b c d"`}
       >
-        <Block a index={0}>
-          A
-        </Block>
-        <Block b index={1}>
-          B
-        </Block>
-        <Block c index={2}>
-          C
-        </Block>
-        <Block d index={3}>
-          D
-        </Block>
+        <Block a>A</Block>
+        <Block b>B</Block>
+        <Block c>C</Block>
+        <Block d>D</Block>
       </GridArea>
     </Example>
   </Examples>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

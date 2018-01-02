@@ -10,10 +10,12 @@
     "build:es": "BABEL_ENV=es babel src --out-dir es",
     "build": "npm run build:es && npm run build:cjs",
     "clean": "trash dist es",
+    "examples": "cd examples && npm i && npm start",
     "flow": "flow",
+    "format": "prettier-eslint \"{src}/**/*.{js,jsx}\" --write",
     "lint": "eslint . --ignore-path .gitignore",
     "prebuild": "npm run clean",
-    "prepare": "npm run flow && npm run build"
+    "prepare": "npm run build"
   },
   "author": "Nemanja Stojanovic <me@nem035.com>",
   "homepage": "https://github.com/nem035/react-gridit.git",
@@ -24,6 +26,10 @@
   "bugs": {
     "url": "https://github.com/nem035/react-gridit/issues"
   },
+  "pre-commit": [
+    "format",
+    "flow"
+  ],
   "keywords": [
     "react",
     "react-component",
@@ -41,6 +47,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "pre-commit": "^1.2.2",
     "react": "^16.2.0",
     "react-media": "^1.6.1",
     "styled-components": "^2.4.0"
@@ -53,12 +60,14 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
-    "eslint-config-prettier": "^2.3.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.6.1",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-prettier": "^2.4.0",
     "eslint-plugin-react": "^7.1.0",
     "flow-bin": "^0.62.0",
+    "prettier": "^1.9.2",
+    "prettier-eslint-cli": "^4.7.0",
     "trash-cli": "^1.4.0"
   }
 }
