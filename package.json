@@ -1,6 +1,6 @@
 {
   "name": "react-gridit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React grid using CSS Grid and styled-components",
   "main": "dist/index.js",
   "module": "es/index.js",
@@ -26,10 +26,7 @@
   "bugs": {
     "url": "https://github.com/nem035/react-gridit/issues"
   },
-  "pre-commit": [
-    "format",
-    "flow"
-  ],
+  "pre-commit": ["format", "flow"],
   "keywords": [
     "react",
     "react-component",
@@ -41,10 +38,7 @@
     "column",
     "row"
   ],
-  "files": [
-    "es",
-    "dist"
-  ],
+  "files": ["es", "dist"],
   "license": "MIT",
   "dependencies": {
     "pre-commit": "^1.2.2",
