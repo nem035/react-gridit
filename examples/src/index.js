@@ -13,7 +13,7 @@ const Block = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => colors[props.fr ? props.fr - 1 : props.index || 0]};
+  background: ${props => colors[props.size ? props.size - 1 : props.index || 0]};
   padding: 5px;
 `;
 
@@ -51,20 +51,20 @@ render(
       <Center>
         <SyntaxHighlighter language="javascript" style={dark}>
           {`<GridRows minSize="20px">
-  <Block>1 fr</Block>
-  <Block fr={2}>2 frs</Block>
-  <Block fr={3}>3 frs</Block>
-  <Block fr={4}>4 frs</Block>
-  <Block fr={5}>5 frs</Block>
+  <Block>1</Block>
+  <Block size={2}>2</Block>
+  <Block size={3}>3</Block>
+  <Block size={4}>4</Block>
+  <Block size={5}>5</Block>
 </GridRows>`}
         </SyntaxHighlighter>
       </Center>
       <GridRows minSize="20px">
-        <Block>1 fr</Block>
-        <Block fr={2}>2 frs</Block>
-        <Block fr={3}>3 frs</Block>
-        <Block fr={4}>4 frs</Block>
-        <Block fr={5}>5 frs</Block>
+        <Block>1</Block>
+        <Block size={2}>2</Block>
+        <Block size={3}>3</Block>
+        <Block size={4}>4</Block>
+        <Block size={5}>5</Block>
       </GridRows>
     </Example>
     <Example>
@@ -72,20 +72,20 @@ render(
       <Center>
         <SyntaxHighlighter language="javascript" style={dark}>
           {`<GridColumns minSize="50px">
-  <Block>1 fr</Block>
-  <Block fr={2}>2 frs</Block>
-  <Block fr={3}>3 frs</Block>
-  <Block fr={4}>4 frs</Block>
-  <Block fr={5}>5 frs</Block>
+  <Block>1</Block>
+  <Block size={2}>2</Block>
+  <Block size={3}>3</Block>
+  <Block size={4}>4</Block>
+  <Block size={5}>5</Block>
 </GridColumns>`}
         </SyntaxHighlighter>
       </Center>
       <GridColumns minSize="50px">
-        <Block>1 fr</Block>
-        <Block fr={2}>2 frs</Block>
-        <Block fr={3}>3 frs</Block>
-        <Block fr={4}>4 frs</Block>
-        <Block fr={5}>5 frs</Block>
+        <Block>1</Block>
+        <Block size={2}>2</Block>
+        <Block size={3}>3</Block>
+        <Block size={4}>4</Block>
+        <Block size={5}>5</Block>
       </GridColumns>
     </Example>
     <Example>

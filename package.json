@@ -35,7 +35,10 @@
     "column",
     "row"
   ],
-  "files": ["es", "dist"],
+  "files": [
+    "es",
+    "dist"
+  ],
   "license": "MIT",
   "dependencies": {
     "react": "^16.2.0",

@@ -13,15 +13,15 @@ type GridAreaProps = {
 
 type GridProps = {
   children: Node,
-  fr?: number,
+  size?: string,
   minSize?: string,
 };
 
 const dimension = (props: GridProps) =>
   Children.toArray(props.children).reduce(
     (cssString, child) =>
-      child && typeof child.props.fr === 'number'
-        ? `${cssString} ${child.props.fr}fr`
+      child && typeof child.props.size === 'string'
+        ? `${cssString} ${child.props.size}`
         : `${cssString} minmax(${props.minSize || '1em'}, 1fr)`,
     ''
   );
