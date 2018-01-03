@@ -8,6 +8,18 @@
 
 React grid using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) and [styled-components](https://www.styled-components.com/)
 
+## Install
+
+```bash
+npm i react-gridit
+```
+
+or
+
+```bash
+yarn add react-gridit
+```
+
 ## Examples
 
 [![Codesandbox examples](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/10p4l2m33) or checkout the [examples](https://github.com/nem035/react-gridit/tree/master/examples) React app.
